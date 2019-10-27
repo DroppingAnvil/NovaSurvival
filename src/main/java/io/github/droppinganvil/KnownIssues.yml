@@ -1,0 +1,54 @@
+22:41:27] [Server thread/ERROR]: null
+org.bukkit.command.CommandException: Unhandled exception executing command 'claim' in plugin NovaSurvival v0.1 BETA
+  at org.bukkit.command.PluginCommand.execute(PluginCommand.java:47) ~[patched.jar:git-PaperSpigot-"4c7641d"]
+  at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:146) ~[patched.jar:git-PaperSpigot-"4c7641d"]
+  at org.bukkit.craftbukkit.v1_8_R3.CraftServer.dispatchCommand(CraftServer.java:666) ~[patched.jar:git-PaperSpigot-"4c7641d"]
+  at net.minecraft.server.v1_8_R3.PlayerConnection.handleCommand(PlayerConnection.java:1189) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1001) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at net.minecraft.server.v1_8_R3.PacketPlayInChat.a(PacketPlayInChat.java:45) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at net.minecraft.server.v1_8_R3.PacketPlayInChat.a(PacketPlayInChat.java:1) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_221]
+  at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_221]
+  at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:774) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:378) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:713) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:616) [patched.jar:git-PaperSpigot-"4c7641d"]
+  at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+Caused by: java.lang.NullPointerException
+  at io.github.droppinganvil.Main.saveClaim(Main.java:23) ~[?:?]
+  at io.github.droppinganvil.ClaimCMD.onCommand(ClaimCMD.java:16) ~[?:?]
+  at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45) ~[patched.jar:git-PaperSpigot-"4c7641d"]
+  ... 15 more
+  ^Fixed aug 28th due to config returning null during copy the files did not generate properly
+
+ [15:46:37] [Server thread/INFO]: Dropping_Anvil issued server command: /novasurvival:party create
+ [15:46:37] [Server thread/ERROR]: null
+ org.bukkit.command.CommandException: Unhandled exception executing command 'novasurvival:party' in plugin NovaSurvival v0.1 BETA
+ 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:47) ~[patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:146) ~[patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at org.bukkit.craftbukkit.v1_8_R3.CraftServer.dispatchCommand(CraftServer.java:666) ~[patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at net.minecraft.server.v1_8_R3.PlayerConnection.handleCommand(PlayerConnection.java:1189) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1001) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at net.minecraft.server.v1_8_R3.PacketPlayInChat.a(PacketPlayInChat.java:45) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at net.minecraft.server.v1_8_R3.PacketPlayInChat.a(PacketPlayInChat.java:1) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_221]
+ 	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_221]
+ 	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:774) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:378) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:713) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:616) [patched.jar:git-PaperSpigot-"4c7641d"]
+ 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+ Caused by: java.lang.NullPointerException
+ 	at io.github.droppinganvil.Main.createParty(Main.java:82) ~[?:?]
+ 	at io.github.droppinganvil.PartyCMD.onCommand(PartyCMD.java:22) ~[?:?]
+ 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45) ~[patched.jar:git-PaperSpigot-"4c7641d"]
+ 	... 15 more
+ ^Untested patch added to check if parties exist before checking if a specific party exist aug 28th 3:54 PM
+ ^Did not solve issue section created during enable is "ActiveParties" we were searching for "Parties" "ActiveParties" has since been changed for compatibility aug 28th 4:00 PM
+Being able to create a new party while being the leader!
+^Added patch to InParties add method in create party might be needed to join party and leave aswell as disband patch implemented to all party methods
+^Confirmed patched aug 28th 4:31 PM

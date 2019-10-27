@@ -1,0 +1,16 @@
+name: NovaSurvival
+author: Dropping_Anvil
+version: 1.0 BETA
+main: io.github.droppinganvil.Main
+commands:
+   s:
+      description: Command help
+   claim:
+      description: Claim your land!
+   unclaim:
+      description: Unclaim your land!
+   party:
+      aliases: [parties]
+      description: Party options!
+   claims:
+      description: GUI of all your claims!
